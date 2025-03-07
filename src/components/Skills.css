@@ -1,0 +1,118 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: white;
+  padding: 20px;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.skills-title-desktop {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skills-title-mobile {
+  top: 10%;
+}
+
+.orbit-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-circle {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-circle:hover {
+  transform: scale(1.1);
+}
+
+.skill-info {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+  .orbit-container {
+    width: 350px;
+    height: 350px;
+  }
+  .skill-circle {
+    width: 85px;
+    height: 85px;
+    font-size: 0.8rem;
+  }
+  .skill-info {
+    width: 85%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 1.8rem;
+  }
+  .orbit-container {
+    width: 280px;
+    height: 280px;
+  }
+  .skill-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 0.7rem;
+  }
+  .skill-info {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
